@@ -72,7 +72,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Get_startedBtn"
         android:layout_width="0dp"
         android:layout_height="60dp"
@@ -81,6 +81,7 @@
         android:layout_marginBottom="16dp"
         android:background="@drawable/shoosh_button"
         android:text="@string/get_started"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

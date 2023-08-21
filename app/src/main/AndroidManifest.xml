@@ -12,10 +12,14 @@
         android:theme="@style/Theme.Swoosh"
         tools:targetApi="31">
         <activity
+            android:name=".BaseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Skill_activity1"
+            android:exported="false" />
+        <activity
             android:name=".activity_League"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">
