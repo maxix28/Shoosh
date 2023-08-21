@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Skill_activity1">
+    tools:context=".controller.Skill_activity1">
 
   <ImageView
       android:id="@+id/imageView7"
@@ -57,23 +57,25 @@
       app:layout_constraintTop_toBottomOf="@+id/textView5">
 
     <ToggleButton
-        android:id="@+id/toggleButton"
+        android:id="@+id/begginerSkillBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_weight="1"
         android:background="@drawable/swoos_toggle"
+        android:onClick="onbeginnerClick"
         android:text="@string/beginner"
         android:textColor="@color/white"
         android:textOff="@string/beginner"
         android:textOn="@string/beginner" />
 
     <ToggleButton
-        android:id="@+id/toggleButton3"
+        android:id="@+id/ballerSkillBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:background="@drawable/swoos_toggle"
+        android:onClick="onBallerClick"
         android:text="@string/baller"
         android:textColor="@color/white"
         android:textOff="@string/baller"
@@ -81,6 +83,7 @@
   </LinearLayout>
 
   <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/ToFinishBtn"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:layout_marginStart="16dp"
@@ -88,6 +91,7 @@
       android:layout_marginBottom="32dp"
       android:background="@drawable/shoosh_button"
       android:fontFamily="@font/montserrat"
+      android:onClick="finishPage"
       android:text="@string/finish"
       android:textColor="@color/white"
       app:layout_constraintBottom_toBottomOf="@+id/imageView7"

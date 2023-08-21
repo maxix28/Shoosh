@@ -1,10 +1,11 @@
-package com.example.swoosh
+package com.example.swoosh.controller
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.example.swoosh.EXTRA_LEAGUE
+import com.example.swoosh.R
 import com.example.swoosh.databinding.ActivityLeagueBinding
 class activity_League : BaseActivity() {
     var selectedString=""
@@ -41,7 +42,7 @@ binding.womenLeagueBTN.isChecked=false
     fun co_edClick(view: View){
         binding.menLeagueBTN.isChecked=false
         binding.womenLeagueBTN.isChecked=false
-        selectedString="COED"
+        selectedString="co-ed"
 
     }
 }
