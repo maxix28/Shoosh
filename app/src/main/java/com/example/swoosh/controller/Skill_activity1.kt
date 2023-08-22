@@ -21,6 +21,10 @@ class Skill_activity1 : BaseActivity() {
 
         println( "SELECTED LEAGUA!!!!!!!!!!!!! "+ player.league)
     }
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState?.putParcelable(EXTRA_PLAYER,player)
+    }
     fun finishPage(view: View){
         println("FINISH         PAGE            STARTS                 OPENING")
         if(player.skill!=""){
@@ -40,6 +44,12 @@ class Skill_activity1 : BaseActivity() {
     fun onbeginnerClick(view: View){
         binding.ballerSkillBTN.isChecked=false
         player.  skill="beginner"
+    }
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        if(savedInstanceState!=null){
+            player= savedInstanceState.getParcelable<Player>(EXTRA_PLAYER)!!
+        }
     }
    fun onBallerClick(view:View){
         binding.begginerSkillBTN.isChecked=false
