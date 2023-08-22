@@ -4,3 +4,4 @@ package com.example.swoosh
 //}
 const val  EXTRA_LEAGUE=""
 const val SKILL=""
+const val EXTRA_PLAYER="player"

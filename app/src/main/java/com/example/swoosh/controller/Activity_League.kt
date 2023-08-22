@@ -4,11 +4,14 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import com.example.swoosh.EXTRA_LEAGUE
+import com.example.swoosh.EXTRA_PLAYER
 import com.example.swoosh.R
 import com.example.swoosh.databinding.ActivityLeagueBinding
+import com.example.swoosh.model.Player
+
 class activity_League : BaseActivity() {
-    var selectedString=""
+
+    var player=Player("","")
     private lateinit var binding: ActivityLeagueBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,9 +23,9 @@ class activity_League : BaseActivity() {
     }
 
     fun leauaNextClick(view: View){
-        if(        selectedString!="") {
+        if( player.league!="") {
             val skillActivity = Intent(this, Skill_activity1::class.java)
-            skillActivity.putExtra(EXTRA_LEAGUE,selectedString)
+            skillActivity.putExtra(EXTRA_PLAYER,player)
             startActivity(skillActivity)
         }else{
             Toast.makeText(this,"Select desired league",Toast.LENGTH_SHORT).show()
@@ -31,18 +34,18 @@ class activity_League : BaseActivity() {
     fun menClick(view: View){
 binding.womenLeagueBTN.isChecked=false
         binding.COEDLeagueBTN.isChecked=false
-        selectedString="mens"
+        player.league="mens"
     }
     fun womenClick(view: View){
         binding.menLeagueBTN.isChecked=false
         binding.COEDLeagueBTN.isChecked=false
-        selectedString="womens"
+        player.league="womens"
 
     }
     fun co_edClick(view: View){
         binding.menLeagueBTN.isChecked=false
         binding.womenLeagueBTN.isChecked=false
-        selectedString="co-ed"
+        player.league="co-ed"
 
     }
 }
